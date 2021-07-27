@@ -6,12 +6,23 @@ import "bootstrap/js/dist/dropdown";
 import "bootstrap/js/dist/tooltip";
 import "bootstrap/dist/css/bootstrap.css";
 
-export default function App() {
+import React, { useState } from 'react';
+import { event } from "jquery";
+ function App() {
+ function onChange(e) {
+    const text=document.querySelector(".note-editable").textContent;
+    console.log(text);
+   e.preventDefault(); 
+  };
   return (
+    <div>
+     
+    
     <ReactSummernote
       value="Default value"
       options={{
         height: 350,
+        
         dialogsInBody: true,
         toolbar: [
           ["style", ["style"]],
@@ -23,7 +34,11 @@ export default function App() {
           ["view", ["fullscreen", "codeview"]]
         ]
       }}
-      // onChange={this.onChange}
+      //  onChange={this.onChange}
+      
     />
+     <input class="button" type="button" onClick={onChange} value="BUTTON" />
+    </div>
   );
 }
+export default App

@@ -1,4 +1,17 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+
+}
+.note-editor{
+
+  margin: 15px;
+}
+.button{
+  display: inline-flex;
+  justify-content: center; /* center the content horizontally */
+  align-items: center; /* center the content vertically */
+ padding: 10px 25px;
+  color: black;
+  background-color: white;
 }
